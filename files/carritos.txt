@@ -1,0 +1,29 @@
+[
+  {
+    "nombre": "carrito de compras 01",
+    "timestamp": 1668770323661,
+    "id": 1
+  },
+  {
+    "nombre": "carrito de compras 01",
+    "timestamp": 1668770326959,
+    "id": 1
+  },
+  {
+    "nombre": "carrito de compras 01",
+    "timestamp": 1668770367314,
+    "id": 2
+  },
+  {
+    "nombre": "carrito de compras 01",
+    "timestamp": 1668770368936,
+    "id": 3,
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "zanahorias",
+        "codigo": "zz023"
+      }
+    ]
+  }
+]

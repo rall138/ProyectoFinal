@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "nombre": "Queso2",
+    "timestamp": 1668784999363,
+    "descripcion": "Descripción del producto Queso eeeee",
+    "codigo": "FF001",
+    "foto": "https://cdn1.iconfinder.com/data/icons/vegan-flat/340/healthy_food_onion_ingredient_vegetable_organic_vegetarian_vegan-64.png",
+    "precio": "$ 250",
+    "stock": "12 kgs"
+  },
+  {
+    "id": 2,
+    "nombre": "Peras",
+    "timestamp": "",
+    "descripcion": "Peras de chacra",
+    "codigo": "PP002",
+    "foto": "https://cdn1.iconfinder.com/data/icons/vegan-flat/340/vegetarian_vegan_food_pear_fruit_leaf_healthy-64.png",
+    "precio": "$50",
+    "stock": "30 kgs"
+  }
+]
