@@ -10,7 +10,7 @@ class carritoController{
 
         this.carritoRouter.get('/carrito', (req, res) =>{
             this.persistencia.obtenerTodos()
-            .then((result) => res.send(result))
+            .then((result) => res.json(result))
             .catch(error => res.json(error))
         })
 
@@ -33,8 +33,13 @@ class carritoController{
             const producto = req.body
             this.persistencia.obtengoItem(req.params.id)
             .then(carrito => {
-                carrito.productos.push(producto)
-                return this.persistencia.modificarItem(carrito.id, carrito)
+                const prod = carrito.productos.filter(prd => prd.id === producto.id)[0]
+                if(!prod){
+                    carrito.productos.push(producto)
+                    return this.persistencia.modificarItem(carrito.id, carrito)
+                }else{
+                    return null
+                }
             })
             .then(status => res.json(status))
         })

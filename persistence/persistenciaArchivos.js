@@ -23,7 +23,7 @@ class PersistenciaArchivos {
         const content = await this.obtenerTodos()
         const array = content.length > 0 ? JSON.parse(content): []
         try{
-            item.id = array.length > 0 ? array[array.length -1].id + 1 : 1
+            item.id = array.length > 0 ? parseInt(array[array.length -1].id) + 1 : 1
             array.push(item)
             await fs.promises.writeFile(FILE_PATH+this.fileName, JSON.stringify(array, null, 2))
             return {status: 'ok', descripcion: item.id}

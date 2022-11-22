@@ -10,7 +10,7 @@ class productosController{
 
         this.productosRouter.get('/productos', (req, res) =>{
             this.persistencia.obtenerTodos()
-            .then((result) => res.send(result))
+            .then((result) => res.json(result))
             .catch(error => res.json(error))
         })
 
