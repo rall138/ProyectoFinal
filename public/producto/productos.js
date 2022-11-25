@@ -84,12 +84,12 @@ fetch('http://localhost:8080/api/productos')
         .then(result =>  result.json())
         .then(productoItem => {
             const template = Handlebars.compile(productosTemplate)
-            const html = template({productos: JSON.parse(productosCollection), producto: productoItem})
+            const html = template({productos: productosCollection, producto: productoItem})
             document.getElementsByTagName('span')[0].innerHTML = html
         })
     }else{
         const template = Handlebars.compile(productosTemplate)
-        const html = template({productos: JSON.parse(productosCollection), producto: {}})
+        const html = template({productos: productosCollection, producto: {}})
         document.getElementsByTagName('span')[0].innerHTML = html
     }
 })

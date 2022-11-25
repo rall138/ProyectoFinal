@@ -38,7 +38,7 @@ fetch('http://localhost:8080/api/carrito')
 .then(result =>  result.json())
 .then(carritos => {
     const template = Handlebars.compile(workwithTemplate)
-    const html = template({carritos: JSON.parse(carritos)})
+    const html = template({carritos: carritos})
     document.getElementsByTagName('span')[0].innerHTML = html
 })
 

@@ -10,7 +10,7 @@ class carritoController{
 
         this.carritoRouter.get('/carrito', (req, res) =>{
             this.persistencia.obtenerTodos()
-            .then((result) => res.json(result))
+            .then((result) => res.json(JSON.parse(result)))
             .catch(error => res.json(error))
         })
 

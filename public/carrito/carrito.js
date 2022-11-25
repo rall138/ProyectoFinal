@@ -42,7 +42,7 @@ fetch(`http://localhost:8080/api/carrito/${carritoId}`)
     .then(result =>  result.json())
     .then(fetchData => {
         const template = Handlebars.compile(templateCarrito)
-        const html = template({carrito_id: carritoId, productos: productos, prods: JSON.parse(fetchData)})
+        const html = template({carrito_id: carritoId, productos: productos, prods: fetchData})
         document.getElementsByTagName('span')[0].innerHTML = html
     })
 })
